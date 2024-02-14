@@ -1,5 +1,4 @@
 import pygame
-
 pygame.init()
 pygame.font.init()
 
@@ -10,7 +9,6 @@ fps = 20
 timer = pygame.time.Clock()
 font = pygame.font.Font('freesansbold.ttf', 18)
 pygame.display.set_caption('POkeR')
-
 
 class button():
     def __init__(self, text, x_pos, y_pos, enabled):
@@ -36,9 +34,7 @@ class button():
             return True
         elif not left_click:
             self.clicked = False
-
         return False
-
 
 DARK_GREEN = (1, 50, 32)
 run = True
