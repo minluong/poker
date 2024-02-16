@@ -1,27 +1,18 @@
+from pygame import pygame
+from button import Button
+from play_menu import PlayMenu
 
-#imports
-from pygame import *
-from button import *
-from play_menu import *
-
-
-#intialisers
 pygame.init()
 pygame.font.init()
 
-
 def home_menu(screen):
+    play_button = Button('Play', 30, 350, True, screen)
+    leader_board_button = Button('Leader Board', 200, 350, True, screen)
+    shop_button = Button('Shop', 370, 350, True, screen)
+    login_button = Button('Login', 540, 350, True, screen)
+    tutorial_button = Button('Tutorial', 710, 350, True, screen)
+    setting_button = Button('Settings', 710, 50, True, screen)
 
-    #creating button instances
-    play_button = button('Play', 30, 350, True, screen)
-    leader_board_button = button('Leader Board', 200, 350, True, screen)
-    shop_button = button('Shop', 370, 350, True, screen)
-    login_button = button('Login', 540, 350, True, screen)
-    tutorial_button = button('Tutorial', 710, 350, True, screen)
-    setting_button = button('Settings', 710, 50, True, screen)
-
-    #drawing options
-    
     play_button.draw()
     leader_board_button.draw()
     shop_button.draw()
@@ -30,7 +21,5 @@ def home_menu(screen):
     setting_button.draw()
 
     if play_button.check_click():
-        play_menu(screen)
-    
-    
-    
+        play_menu = PlayMenu(screen)
+        play_menu.display_options()
