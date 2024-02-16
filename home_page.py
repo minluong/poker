@@ -1,11 +1,14 @@
+#imports
 from pygame import pygame
 from button import Button
 from play_menu import PlayMenu
 
+#initialisers
 pygame.init()
 pygame.font.init()
 
 def home_menu(screen):
+    #creating button instances
     play_button = Button('Play', 30, 350, True, screen)
     leader_board_button = Button('Leader Board', 200, 350, True, screen)
     shop_button = Button('Shop', 370, 350, True, screen)
@@ -13,6 +16,7 @@ def home_menu(screen):
     tutorial_button = Button('Tutorial', 710, 350, True, screen)
     setting_button = Button('Settings', 710, 50, True, screen)
 
+    #drawing options
     play_button.draw()
     leader_board_button.draw()
     shop_button.draw()

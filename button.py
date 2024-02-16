@@ -1,9 +1,11 @@
+#imports
 import pygame
 pygame.init()
 pygame.font.init()
 
 font = pygame.font.Font("freesansbold.ttf", 18)
 
+#creating buttons
 class Button:
     def __init__(self, text, x_pos, y_pos, enabled, screen):
         self.text = text
@@ -11,7 +13,7 @@ class Button:
         self.y_pos = y_pos
         self.enabled = enabled
         self.screen = screen
-
+    
     def draw(self):
         button_text = font.render(self.text, True, 'black')
         button_rect = pygame.Rect(self.x_pos, self.y_pos, 150, 40)
